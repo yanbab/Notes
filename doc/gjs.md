@@ -1,6 +1,8 @@
 # Native GTK3/GNOME apps in Javascript (Gjs)
 
+Some notes about GJS. 
 
+What is GJS ? Sometimes called GNOME JavaScript, it's a programming environment comparable to Node.js. It provides bindings to the GNOME ecosystem, allowing users to build powerfull, native applications.
 
 ## Resources
 
@@ -69,12 +71,23 @@ There is no clean way to get local path if your app is not packaged, so we'll us
         return path
     }
 
-    imports.push(cwd()) // Add to imports search paths
+    imports.push(cwd())
 
     // Now you can import local modules,
     // let's say you have a `my_module.js` file
     // (or `my_module/index.js`) :
 
     const Module = imports.my_module 
+
+    Module.test()
+
+Then create file `my_module.js` (or `mymodule/index.js`) :
+
+    var Module = {
+        test() {
+            print("Hello !")
+        }
+    }
+
 
 

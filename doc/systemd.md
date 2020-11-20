@@ -15,11 +15,11 @@ Read entries from a specific unit
 
     journalctl -u apache.service
 
-Read entries since boot (the new `dmesg`)
+Read entries since boot
 
     journalctl --boot
 
-Tail the journal**
+Monitor the journal
 
     journalctl -f
     journalctl -u apache.service -f
